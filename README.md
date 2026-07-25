@@ -2,7 +2,6 @@
 **BITS Pilani — Work Integrated Learning Programmes (WILP)**  
 **Programme:** M.Tech (AIML / DSE)  
 **Course:** Machine Learning  
-**Marks:** 15  
 
 ---
 
@@ -148,33 +147,3 @@ The deployed app includes all mandatory features:
 | Confusion matrix / classification report | Side-by-side visualization and detailed report table |
 
 ---
-
-## Reproducibility Notes (BITS Virtual Lab)
-
-1. Clone the repository  
-2. Create/activate your Python environment  
-3. `pip install -r requirements.txt`  
-4. `python model/train_models.py`  
-5. `streamlit run app.py`  
-6. Capture **one screenshot** of execution on **BITS Virtual Lab** for the submission PDF  
-
----
-
-## Submission Checklist Mapping
-
-- [x] Complete source code  
-- [x] `requirements.txt`  
-- [x] Clear `README.md` (this file)  
-- [x] Test data used in experiments (`test_data.csv`)  
-- [x] Saved models under `model/`  
-- [x] Streamlit app with upload, model dropdown, metrics, confusion matrix/report  
-- [x] Public GitHub link: https://github.com/thanuja8rr/online-shoppers-purchasing-intention  
-- [x] Live Streamlit Cloud link: https://online-shoppers-purchasing-intention-ml-assignment.streamlit.app/  
-- [ ] BITS Virtual Lab screenshot (add in submission PDF)  
-
----
-
-## Academic Integrity
-
-This repository is prepared as an original student submission for BITS WILP ML Assignment-2.  
-Dataset source is publicly cited (UCI). Model hyperparameters and UI are customized for this project.
