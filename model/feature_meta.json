@@ -1,0 +1,51 @@
+{
+  "target": "Revenue",
+  "numeric_features": [
+    "Administrative",
+    "Administrative_Duration",
+    "Informational",
+    "Informational_Duration",
+    "ProductRelated",
+    "ProductRelated_Duration",
+    "BounceRates",
+    "ExitRates",
+    "PageValues",
+    "SpecialDay",
+    "OperatingSystems",
+    "Browser",
+    "Region",
+    "TrafficType"
+  ],
+  "categorical_features": [
+    "Month",
+    "VisitorType",
+    "Weekend"
+  ],
+  "feature_order": [
+    "Administrative",
+    "Administrative_Duration",
+    "Informational",
+    "Informational_Duration",
+    "ProductRelated",
+    "ProductRelated_Duration",
+    "BounceRates",
+    "ExitRates",
+    "PageValues",
+    "SpecialDay",
+    "Month",
+    "OperatingSystems",
+    "Browser",
+    "Region",
+    "TrafficType",
+    "VisitorType",
+    "Weekend"
+  ],
+  "class_names": [
+    "NoPurchase",
+    "Purchase"
+  ],
+  "n_features": 17,
+  "n_instances": 12330,
+  "dataset_name": "Online Shoppers Purchasing Intention (UCI)",
+  "dataset_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00468/online_shoppers_intention.csv"
+}

@@ -1,0 +1,286 @@
+{
+  "dataset": {
+    "target": "Revenue",
+    "numeric_features": [
+      "Administrative",
+      "Administrative_Duration",
+      "Informational",
+      "Informational_Duration",
+      "ProductRelated",
+      "ProductRelated_Duration",
+      "BounceRates",
+      "ExitRates",
+      "PageValues",
+      "SpecialDay",
+      "OperatingSystems",
+      "Browser",
+      "Region",
+      "TrafficType"
+    ],
+    "categorical_features": [
+      "Month",
+      "VisitorType",
+      "Weekend"
+    ],
+    "feature_order": [
+      "Administrative",
+      "Administrative_Duration",
+      "Informational",
+      "Informational_Duration",
+      "ProductRelated",
+      "ProductRelated_Duration",
+      "BounceRates",
+      "ExitRates",
+      "PageValues",
+      "SpecialDay",
+      "Month",
+      "OperatingSystems",
+      "Browser",
+      "Region",
+      "TrafficType",
+      "VisitorType",
+      "Weekend"
+    ],
+    "class_names": [
+      "NoPurchase",
+      "Purchase"
+    ],
+    "n_features": 17,
+    "n_instances": 12330,
+    "dataset_name": "Online Shoppers Purchasing Intention (UCI)",
+    "dataset_url": "https://archive.ics.uci.edu/ml/machine-learning-databases/00468/online_shoppers_intention.csv"
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "train_rows": 9864,
+    "test_rows": 2466
+  },
+  "metrics": {
+    "Logistic Regression": {
+      "Accuracy": 0.85,
+      "AUC": 0.8962,
+      "Precision": 0.5107,
+      "Recall": 0.7487,
+      "F1": 0.6072,
+      "MCC": 0.533,
+      "confusion_matrix": [
+        [
+          1810,
+          274
+        ],
+        [
+          96,
+          286
+        ]
+      ],
+      "classification_report": {
+        "NoPurchase": {
+          "precision": 0.9496327387198321,
+          "recall": 0.8685220729366603,
+          "f1-score": 0.9072681704260651,
+          "support": 2084.0
+        },
+        "Purchase": {
+          "precision": 0.5107142857142857,
+          "recall": 0.7486910994764397,
+          "f1-score": 0.6072186836518046,
+          "support": 382.0
+        },
+        "accuracy": 0.8499594484995945,
+        "macro avg": {
+          "precision": 0.730173512217059,
+          "recall": 0.80860658620655,
+          "f1-score": 0.7572434270389349,
+          "support": 2466.0
+        },
+        "weighted avg": {
+          "precision": 0.88164131574817,
+          "recall": 0.8499594484995945,
+          "f1-score": 0.8607884851268892,
+          "support": 2466.0
+        }
+      }
+    },
+    "Decision Tree": {
+      "Accuracy": 0.8232,
+      "AUC": 0.8513,
+      "Precision": 0.4588,
+      "Recall": 0.788,
+      "F1": 0.58,
+      "MCC": 0.5057,
+      "confusion_matrix": [
+        [
+          1729,
+          355
+        ],
+        [
+          81,
+          301
+        ]
+      ],
+      "classification_report": {
+        "NoPurchase": {
+          "precision": 0.9552486187845304,
+          "recall": 0.8296545105566219,
+          "f1-score": 0.8880328710837185,
+          "support": 2084.0
+        },
+        "Purchase": {
+          "precision": 0.45884146341463417,
+          "recall": 0.7879581151832461,
+          "f1-score": 0.5799614643545279,
+          "support": 382.0
+        },
+        "accuracy": 0.8231954582319546,
+        "macro avg": {
+          "precision": 0.7070450410995823,
+          "recall": 0.808806312869934,
+          "f1-score": 0.7339971677191233,
+          "support": 2466.0
+        },
+        "weighted avg": {
+          "precision": 0.8783518088286097,
+          "recall": 0.8231954582319546,
+          "f1-score": 0.8403105363835763,
+          "support": 2466.0
+        }
+      }
+    },
+    "kNN": {
+      "Accuracy": 0.8743,
+      "AUC": 0.8018,
+      "Precision": 0.6651,
+      "Recall": 0.3796,
+      "F1": 0.4833,
+      "MCC": 0.4391,
+      "confusion_matrix": [
+        [
+          2011,
+          73
+        ],
+        [
+          237,
+          145
+        ]
+      ],
+      "classification_report": {
+        "NoPurchase": {
+          "precision": 0.8945729537366548,
+          "recall": 0.9649712092130518,
+          "f1-score": 0.9284395198522623,
+          "support": 2084.0
+        },
+        "Purchase": {
+          "precision": 0.6651376146788991,
+          "recall": 0.3795811518324607,
+          "f1-score": 0.48333333333333334,
+          "support": 382.0
+        },
+        "accuracy": 0.8742903487429035,
+        "macro avg": {
+          "precision": 0.7798552842077769,
+          "recall": 0.6722761805227563,
+          "f1-score": 0.7058864265927978,
+          "support": 2466.0
+        },
+        "weighted avg": {
+          "precision": 0.8590318752613658,
+          "recall": 0.8742903487429035,
+          "f1-score": 0.8594895753063454,
+          "support": 2466.0
+        }
+      }
+    },
+    "Naive Bayes": {
+      "Accuracy": 0.6736,
+      "AUC": 0.7932,
+      "Precision": 0.2937,
+      "Recall": 0.788,
+      "F1": 0.4279,
+      "MCC": 0.3234,
+      "confusion_matrix": [
+        [
+          1360,
+          724
+        ],
+        [
+          81,
+          301
+        ]
+      ],
+      "classification_report": {
+        "NoPurchase": {
+          "precision": 0.9437890353920888,
+          "recall": 0.6525911708253359,
+          "f1-score": 0.7716312056737589,
+          "support": 2084.0
+        },
+        "Purchase": {
+          "precision": 0.29365853658536584,
+          "recall": 0.7879581151832461,
+          "f1-score": 0.42786069651741293,
+          "support": 382.0
+        },
+        "accuracy": 0.6735604217356043,
+        "macro avg": {
+          "precision": 0.6187237859887273,
+          "recall": 0.720274643004291,
+          "f1-score": 0.5997459510955859,
+          "support": 2466.0
+        },
+        "weighted avg": {
+          "precision": 0.8430794447415745,
+          "recall": 0.6735604217356043,
+          "f1-score": 0.7183788396973906,
+          "support": 2466.0
+        }
+      }
+    },
+    "Random Forest (Ensemble)": {
+      "Accuracy": 0.8933,
+      "AUC": 0.9245,
+      "Precision": 0.6476,
+      "Recall": 0.6832,
+      "F1": 0.665,
+      "MCC": 0.6019,
+      "confusion_matrix": [
+        [
+          1942,
+          142
+        ],
+        [
+          121,
+          261
+        ]
+      ],
+      "classification_report": {
+        "NoPurchase": {
+          "precision": 0.9413475521085798,
+          "recall": 0.9318618042226487,
+          "f1-score": 0.9365806607185918,
+          "support": 2084.0
+        },
+        "Purchase": {
+          "precision": 0.6476426799007444,
+          "recall": 0.6832460732984293,
+          "f1-score": 0.664968152866242,
+          "support": 382.0
+        },
+        "accuracy": 0.8933495539334956,
+        "macro avg": {
+          "precision": 0.794495116004662,
+          "recall": 0.807553938760539,
+          "f1-score": 0.800774406792417,
+          "support": 2466.0
+        },
+        "weighted avg": {
+          "precision": 0.8958506903148274,
+          "recall": 0.8933495539334956,
+          "f1-score": 0.894506054879339,
+          "support": 2466.0
+        }
+      }
+    }
+  }
+}
