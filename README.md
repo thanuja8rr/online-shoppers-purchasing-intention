@@ -96,7 +96,7 @@ streamlit run app.py
 
 ### Streamlit Community Cloud
 
-**Live App:** _(will be updated immediately after Streamlit Cloud deploy)_
+**Live App:** https://online-shoppers-purchasing-intention-ml-assignment.streamlit.app/
 
 ---
 
@@ -169,7 +169,7 @@ The deployed app includes all mandatory features:
 - [x] Saved models under `model/`  
 - [x] Streamlit app with upload, model dropdown, metrics, confusion matrix/report  
 - [x] Public GitHub link: https://github.com/thanuja8rr/online-shoppers-purchasing-intention  
-- [ ] Live Streamlit Cloud link (add after deploy)  
+- [x] Live Streamlit Cloud link: https://online-shoppers-purchasing-intention-ml-assignment.streamlit.app/  
 - [ ] BITS Virtual Lab screenshot (add in submission PDF)  
 
 ---
