@@ -96,8 +96,7 @@ streamlit run app.py
 
 ### Streamlit Community Cloud
 
-> **Replace this placeholder with your deployed app URL:**  
-> `https://share.streamlit.io/<your-username>/<your-repo-name>/main/app.py`
+**Live App:** _(will be updated immediately after Streamlit Cloud deploy)_
 
 ---
 
@@ -169,7 +168,7 @@ The deployed app includes all mandatory features:
 - [x] Test data used in experiments (`test_data.csv`)  
 - [x] Saved models under `model/`  
 - [x] Streamlit app with upload, model dropdown, metrics, confusion matrix/report  
-- [ ] Public GitHub link (add after push)  
+- [x] Public GitHub link: https://github.com/thanuja8rr/online-shoppers-purchasing-intention  
 - [ ] Live Streamlit Cloud link (add after deploy)  
 - [ ] BITS Virtual Lab screenshot (add in submission PDF)  
 
