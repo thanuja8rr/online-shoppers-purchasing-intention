@@ -372,6 +372,7 @@ def main():
             }
         )
     comparison_df = pd.DataFrame(rows)
+    comparison_df.index = range(1, len(comparison_df) + 1)
     st.dataframe(
         comparison_df.style.format(
             {
