@@ -1,7 +1,7 @@
 # Machine Learning Assignment - 2  
-**BITS Pilani — Work Integrated Learning Programmes (WILP)**  
-**Programme:** M.Tech (AIML / DSE)  
-**Course:** Machine Learning  
+**BITS Pilani — Work Integrated Learning Programme (WILP)**  
+**Programme:** M.Tech (DSE)  
+**Course:** Machine Learning
 
 ---
 
@@ -119,8 +119,6 @@ The following classification models were implemented on the **same dataset** and
 | Naive Bayes | 0.6736 | 0.7932 | 0.2937 | 0.7880 | 0.4279 | 0.3234 |
 | Random Forest (Ensemble) | **0.8933** | **0.9245** | **0.6476** | 0.6832 | **0.6650** | **0.6019** |
 
-> Note: Metrics above are produced by `model/train_models.py` and stored in `model/metrics.json`.  
-> If you re-train, update this table from the newly generated metrics file.
 
 ### Observations on Model Performance
 
