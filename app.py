@@ -333,17 +333,14 @@ def main():
         '<div class="section-head">3. Confusion Matrix & Classification Report</div>',
         unsafe_allow_html=True,
     )
-    left, right = st.columns([1.05, 1.2])
-    with left:
-        fig = plot_confusion_matrix(cm, class_names)
-        st.pyplot(fig, width="stretch")
-        plt.close(fig)
-    with right:
-        report_df = pd.DataFrame(report).transpose()
-        # Keep readable columns
-        keep_cols = [c for c in ["precision", "recall", "f1-score", "support"] if c in report_df.columns]
-        st.dataframe(report_df[keep_cols].style.format(precision=4), width="stretch")
-        st.caption("Classification report generated on the currently loaded test data.")
+    fig = plot_confusion_matrix(cm, class_names)
+    st.pyplot(fig, width="stretch")
+    plt.close(fig)
+
+    report_df = pd.DataFrame(report).transpose()
+    keep_cols = [c for c in ["precision", "recall", "f1-score", "support"] if c in report_df.columns]
+    st.dataframe(report_df[keep_cols].style.format(precision=4), width="stretch")
+    st.caption("Classification report generated on the currently loaded test data.")
 
     st.markdown(
         '<div class="section-head">4. Cross-Model Comparison (benchmark test split)</div>',

@@ -142,6 +142,6 @@ The deployed app includes all mandatory features:
 | Dataset upload (CSV test data) | Sidebar file uploader (required) |
 | Model selection dropdown | All five trained models selectable |
 | Display of evaluation metrics | Accuracy, AUC, Precision, Recall, F1, MCC |
-| Confusion matrix / classification report | Side-by-side visualization and detailed report table |
+| Confusion matrix / classification report | Confusion matrix followed by classification report table |
 
 ---
