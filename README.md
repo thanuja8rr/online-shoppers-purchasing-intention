@@ -139,7 +139,7 @@ The deployed app includes all mandatory features:
 
 | Requirement | Implementation |
 |---|---|
-| Dataset upload (CSV test data) | Sidebar file uploader + bundled `test_data.csv` option |
+| Dataset upload (CSV test data) | Sidebar file uploader; defaults to repository `test_data.csv` when no file is uploaded |
 | Model selection dropdown | All five trained models selectable |
 | Display of evaluation metrics | Accuracy, AUC, Precision, Recall, F1, MCC |
 | Confusion matrix / classification report | Side-by-side visualization and detailed report table |

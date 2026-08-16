@@ -35,7 +35,7 @@ ROOT = Path(__file__).resolve().parent
 MODEL_DIR = ROOT / "model"
 METRICS_JSON = MODEL_DIR / "metrics.json"
 FEATURE_META_PATH = MODEL_DIR / "feature_meta.json"
-DEFAULT_TEST_CSV = ROOT / "test_data.csv"
+TEST_DATA_PATH = ROOT / "test_data.csv"
 
 MODEL_FILES = {
     "Logistic Regression": "logistic_regression.joblib",
@@ -238,17 +238,16 @@ def main():
 
     with st.sidebar:
         st.markdown("### Controls")
-        st.caption("Upload held-out test CSV and choose a trained model.")
+        st.caption("Upload a test CSV or use the default repository test data, then choose a model.")
 
         uploaded = st.file_uploader(
             "Upload test dataset (CSV)",
             type=["csv"],
-            help="Upload only test data. Must include feature columns and optional Revenue target.",
-        )
-        use_default = st.checkbox(
-            "Use bundled test_data.csv",
-            value=uploaded is None,
-            help="Loads the repository test split if no file is uploaded.",
+            help=(
+                "Upload test data with the same feature columns as training, "
+                "plus the Revenue target column. If no file is uploaded, "
+                "the app loads test_data.csv from the repository."
+            ),
         )
 
         model_name = st.selectbox(
@@ -265,15 +264,15 @@ def main():
         )
         st.caption("Models were trained with a stratified 80/20 split (random_state=42).")
 
-    # Resolve dataframe
+    # Resolve dataframe: uploaded CSV takes priority; otherwise load repository test_data.csv
     if uploaded is not None:
         df = pd.read_csv(uploaded)
         data_source = f"Uploaded file: `{uploaded.name}`"
-    elif use_default and DEFAULT_TEST_CSV.exists():
-        df = pd.read_csv(DEFAULT_TEST_CSV)
-        data_source = "Bundled `test_data.csv` (held-out test split)"
+    elif TEST_DATA_PATH.exists():
+        df = pd.read_csv(TEST_DATA_PATH)
+        data_source = "Repository test data (`test_data.csv`)"
     else:
-        st.warning("Please upload a CSV test file or enable the bundled test data option.")
+        st.warning("Please upload a CSV test file to evaluate the selected model.")
         st.stop()
 
     st.markdown('<div class="section-head">1. Loaded Test Data</div>', unsafe_allow_html=True)
