@@ -395,4 +395,5 @@ def main():
         st.dataframe(preview.head(15), width="stretch")
 
 
+if __name__ == "__main__":
     main()
