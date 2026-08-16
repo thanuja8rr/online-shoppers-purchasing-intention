@@ -394,12 +394,5 @@ def main():
         preview["Purchase_Probability"] = np.round(y_score, 4)
         st.dataframe(preview.head(15), width="stretch")
 
-    st.markdown("---")
-    st.caption(
-        "BITS Pilani WILP · M.Tech (AIML/DSE) · Machine Learning Assignment-2 · "
-        "Interactive demonstration of five classical classifiers on the same UCI dataset."
-    )
 
-
-if __name__ == "__main__":
     main()
