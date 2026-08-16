@@ -60,7 +60,7 @@ The end-to-end workflow covers:
 
 ## c. GitHub Repository Link
 
-> `https://github.com/thanuja8rr/online-shoppers-purchasing-intention`
+**Repository:** [https://github.com/thanuja8rr/online-shoppers-purchasing-intention](https://github.com/thanuja8rr/online-shoppers-purchasing-intention)
 
 ### Repository Structure
 
@@ -95,7 +95,7 @@ streamlit run app.py
 
 ### Streamlit Community Cloud
 
-**Live App:** https://online-shoppers-purchasing-intention-ml-assignment.streamlit.app/
+**Live App:** [https://online-shoppers-purchasing-intention-ml-assignment.streamlit.app/](https://online-shoppers-purchasing-intention-ml-assignment.streamlit.app/)
 
 ---
 
