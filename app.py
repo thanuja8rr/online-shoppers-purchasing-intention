@@ -200,10 +200,11 @@ def render_metric_cards(metrics: dict):
 
 
 def plot_confusion_matrix(cm: np.ndarray, class_names: list[str]):
-    fig, ax = plt.subplots(figsize=(5.2, 4.2))
+    fig, ax = plt.subplots(figsize=(3.6, 3.0), dpi=120)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_names)
     disp.plot(ax=ax, cmap="BuGn", colorbar=False, values_format="d")
-    ax.set_title("Confusion Matrix", fontsize=12, pad=10)
+    ax.set_title("Confusion Matrix", fontsize=11, pad=8)
+    ax.tick_params(axis="both", labelsize=9)
     fig.tight_layout()
     return fig
 
@@ -330,13 +331,19 @@ def main():
     render_metric_cards(live_metrics)
 
     st.markdown(
-        '<div class="section-head">3. Confusion Matrix & Classification Report</div>',
+        '<div class="section-head">3. Confusion Matrix</div>',
         unsafe_allow_html=True,
     )
-    fig = plot_confusion_matrix(cm, class_names)
-    st.pyplot(fig, width="stretch")
-    plt.close(fig)
+    cm_col, _ = st.columns([0.45, 0.55])
+    with cm_col:
+        fig = plot_confusion_matrix(cm, class_names)
+        st.pyplot(fig, width="content")
+        plt.close(fig)
 
+    st.markdown(
+        '<div class="section-head">Classification Report</div>',
+        unsafe_allow_html=True,
+    )
     report_df = pd.DataFrame(report).transpose()
     keep_cols = [c for c in ["precision", "recall", "f1-score", "support"] if c in report_df.columns]
     st.dataframe(report_df[keep_cols].style.format(precision=4), width="stretch")
